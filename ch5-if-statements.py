@@ -49,3 +49,34 @@ if 'mushrooms' in requested_toppings:
     print("Adding mushrooms")
 if 'pepperoni' in requested_toppings: print("Adding pepperoni.")
 if 'extra cheese' in requested_toppings: print("Adding extra cheese.")
+
+
+# Using if Statements with Lists
+# Checking for Special Items
+
+requested_toppings = ['mushrooms', 'green peppers', 'extra cheese']
+
+for topping in requested_topping:
+    if topping == 'mushroom':
+        print("you can have it")
+    else:
+        print("nope")
+
+
+# Checking that a list is not Empty
+requested_toppings = []
+
+if requested_toppings:
+    ...
+else ...
+# in 'if' condition, requested_toppings returns True if there is at least one item, other wise an empty list returns False
+
+# Using Multiple Lists
+available_toppings = ['cheese', 'meat', 'veggies']
+requested_toppings = ['meat']
+
+for requested_topping in requested_toppings:
+    if requested_topping in available_toppings:
+        print('you got ' + requested_topping)
+    else:
+        print("sorry we don't have it")
