@@ -108,3 +108,27 @@ print(len(aliens))
 
 
 # A List in a Dictionary
+pizza = {
+    'crust': 'thick',
+    'topping': ['mushrooms', 'extra cheese'],
+    }
+
+# Summarize the order
+print("you ordered a " + pizza['crust'] + 'with the following toppings')
+
+for topping in pizza['topping']:
+    print(topping)
+
+
+# Example
+favorite_languages = {
+    'jen': ['python', 'ruby'],
+    'sarah': ['c'],
+    'edward': ['ruby', 'go'],
+    'phil': ['python, 'haskell],
+    }
+
+for name, languages in favorite_languages:
+    print(name)
+    for language in languages:
+        print(language.title())
