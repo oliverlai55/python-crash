@@ -71,3 +71,40 @@ for name in favorite_language.keys():
 # To get order use sorted()
 for name in sorted(favorite_language.keys()):
     print(name.title())
+
+# Looping through all values in a dictionary
+for language in favorite_language.values()
+    print(language.title())
+
+# Wrap set() around a list that contains duplicate items, use set() to pull out the unique languages in favorite_languages.values(), so 'python' is only returned once
+
+# Nesting
+
+# A List of Dictionaries
+aliens = []
+
+# make 30 aliens
+for i in range(30):
+    new_alien = {'color': 'green', 'points': 5, 'speed': 'slow'}
+    aliens.append(new_alien)
+
+# Show the first 5 aliens:
+for alien in aliens[:5]:
+    print(alien)
+
+# Modify first 3 aliens
+for alien in aliens[0:3]:
+    if alien['color'] == 'green':
+        alien['color'] = 'yellow'
+        alien['points'] = '10'
+        alien['speed'] = 'medium'
+    elif alien['color'] == 'yellow':
+        alien['color'] = 'red'
+        alien['speed'] = 'fast'
+        alien['points'] = 15
+
+# Show how many alines have been created.
+print(len(aliens))
+
+
+# A List in a Dictionary
