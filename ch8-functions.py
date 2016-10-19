@@ -53,3 +53,33 @@ def get_formatted_name(first_name, last_name, middle_name=''):
         full_name = first_name + middle_anme + last_name
     else:
         full_name = first_name + last_name
+
+
+# Preventing a Function from Modifying a List
+function_name(list_name[:])
+# the : makes a copy of the list to send to the function
+
+print_models(unprinted_designs[:], completed_models)
+# try not to make copies of list
+
+# Passing an Arbitrary Number of Arguments
+# using the asterik pack all the paramter values into a tuple
+def make_pizza(*toppings):
+    print(toppings)
+    for topping in toppings:
+        print(topping)
+
+make_pizza('pepperoni')
+make_pizza('mushrooms', 'green peppers', 'extra cheese')
+
+
+# Mixing Positional and Arbitrary Arguments
+# the param that accepts an arbitrary number of arguments must be placed last in the function definition
+
+def make_pizza(size, *toppings):
+    print(size)
+    for topping in toppings:
+        print(topping)
+
+make_pizza(16, 'pepperoni')
+make_pizza(12, 'mushrooms', 'green pepper', 'extra cheese')
