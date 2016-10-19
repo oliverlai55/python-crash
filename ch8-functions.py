@@ -83,3 +83,24 @@ def make_pizza(size, *toppings):
 
 make_pizza(16, 'pepperoni')
 make_pizza(12, 'mushrooms', 'green pepper', 'extra cheese')
+
+# Using Arbitrary Keyword Arguments
+# double asteriks before the param creates an empty dictionary
+def build_profile(first, last, **user_info):
+    profile = {}
+    profile['first_name'] = first
+    profile['last_name'] = last
+    for key, value in user_info.items():
+        profile[key] = value
+    return profile
+
+user_profile = build_profile('albert', 'einstein', location='princeton', field='physics')
+
+# Storing Functions in Modules
+# use import
+
+# Import Specific Functions
+# from module_name import funcion_name, function_name2
+from pizza import make_pizza
+
+# More info on import functions at pg 189
