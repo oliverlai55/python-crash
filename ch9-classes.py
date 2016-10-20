@@ -77,3 +77,39 @@ my_used_car.update_odometer(23500)
 my_used_car.update_odometer()
 my_used_car.increase_odometer(100)
 my_used_car.read_odometer()
+
+
+# Inheritance
+# When one class inherits from another, takes on all the attributes and methods of the first class. from Parent class to child class
+
+class ElectricCar(Car):
+    """Represent aspects of a car, specific to electric cars."""
+    def _init_(self, make, model, year):
+        """Initialize atttributes of the parent class"""
+        super()._init_(make, model, year)
+# super() function is a special funciton that helps Python make connections between the parent and child class.  It tells Python to call the _init_() method from ElectricCar's parent class.  Gives ElectricCar instance all of the attributes of its parents class.
+
+my_tesla = ElectricCar('tesla','model s', 2016)
+print(my_tesla.get_description_name())
+
+# You can override Methods from the Parent Class
+
+# Instances as attributes
+class Battery()
+    def _init_(self, battery_size = 70):
+        self.battery_size = battery_size
+
+    def describe_battery(self):
+        print(str(self.battery_size))
+
+class ElectricCar(Car):
+    """Represent aspects of a car, specific to electric vehicles."""
+    def __init__(self, make, model, year):
+    """
+    Initialize attributes of the parent class.
+    Then initialize attributes specific to an electric car.
+    """
+    super().__init__(make, model, year)
+    self.battery = Battery()
+
+my_tesla.batttery.describe_battery()
