@@ -137,3 +137,48 @@ completed_models = []
 
 print_models(unprinted_designs, completed_models)
 show_completed_models(completed_models)
+
+
+
+# Passing an Arbitrary Number of Arguments
+# using the asterik pack all the paramter values into a tuple
+def make_pizza(*toppings):
+    print(toppings)
+    for topping in toppings:
+        print(topping)
+
+make_pizza('pepperoni')
+make_pizza('mushrooms', 'green peppers', 'extra cheese')
+
+
+# Mixing Positional and Arbitrary Arguments
+# the param that accepts an arbitrary number of arguments must be placed last in the function definition
+
+def make_pizza(size, *toppings):
+    print(size)
+    for topping in toppings:
+        print(topping)
+
+make_pizza(16, 'pepperoni')
+make_pizza(12, 'mushrooms', 'green pepper', 'extra cheese')
+
+# Using Arbitrary Keyword Arguments
+# double asteriks before the param creates an empty dictionary
+def build_profile(first, last, **user_info):
+    profile = {}
+    profile['first_name'] = first
+    profile['last_name'] = last
+    for key, value in user_info.items():
+        profile[key] = value
+    return profile
+
+user_profile = build_profile('albert', 'einstein', location='princeton', field='physics')
+
+# Storing Functions in Modules
+# use import
+
+# Import Specific Functions
+# from module_name import funcion_name, function_name2
+from pizza import make_pizza
+
+# More info on import functions at pg 189
