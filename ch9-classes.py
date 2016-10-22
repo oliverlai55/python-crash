@@ -102,6 +102,16 @@ class Battery()
     def describe_battery(self):
         print(str(self.battery_size))
 
+    def get_range(self):
+        """ Print a statement about the range this battery provides."""
+        if self.battery_size == 70:
+            range = 240
+        elif self.battery_size == 85:
+            range = 270
+
+        message = "This car can go approx " + str(range)
+        print(message)
+
 class ElectricCar(Car):
     """Represent aspects of a car, specific to electric vehicles."""
     def __init__(self, make, model, year):
@@ -113,3 +123,14 @@ class ElectricCar(Car):
     self.battery = Battery()
 
 my_tesla.batttery.describe_battery()
+my_tesla.battery.get_range()
+
+
+# Can import single class
+from car import Car
+
+my_new_car = Car('audi', 'a4', 2016)
+print(my_new_car.get_description_name())
+
+my_new_car.odometer_reading = 23
+my_new_car.read_odometer()
